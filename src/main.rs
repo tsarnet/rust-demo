@@ -18,6 +18,7 @@ fn main() -> Result<(), eframe::Error> {
                 Box::new(App {
                     username: data.user.username.unwrap(),
                     id: data.user.id,
+                    hwid: data.hwid,
                 })
             }),
         )
@@ -27,6 +28,7 @@ fn main() -> Result<(), eframe::Error> {
 struct App {
     id: String,
     username: String,
+    hwid: String,
 }
 
 impl eframe::App for App {
@@ -39,6 +41,7 @@ impl eframe::App for App {
 
                 ui.label(format!("Hello, {}", self.username));
                 ui.label(format!("Your user ID is {}", self.id));
+                ui.label(format!("Your user HWID is {}", self.hwid));
             });
         }}
     }

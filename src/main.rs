@@ -1,24 +1,27 @@
-#![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
+// #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
 
 use eframe::egui;
 use goldberg::goldberg_stmts;
-use std::io;
-use tsar_client::{Client, Data};
+use tsar_client::{Client, ClientOptions};
 
 fn main() -> Result<(), eframe::Error> {
     goldberg_stmts! {{
-        let api = Client::new("58816206-b24c-41d4-a594-8500746a78ee", "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAELlyGTmNEv3AarudyshJUUA9ig1pOfSl5qWX8g/hkPiieeKlWvv9o4IZmWI4cCrcR0fteVEcUhBvu5GAr/ITBqA==");
+        let options = ClientOptions {
+            app_id: "58816206-b24c-41d4-a594-8500746a78ee".to_string(),
+            client_key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAELlyGTmNEv3AarudyshJUUA9ig1pOfSl5qWX8g/hkPiieeKlWvv9o4IZmWI4cCrcR0fteVEcUhBvu5GAr/ITBqA==".to_string(),
+            debug_print: true
+        };
 
-        let data = api.authenticate_user().unwrap();
+        let client = Client::new(options).expect("Authentication failed.");
 
         eframe::run_native(
             "TSAR Crack Test #1",
             eframe::NativeOptions::default(),
-            Box::new(|cc| {
+            Box::new(|_| {
                 Box::new(App {
-                    username: data.user.username.unwrap(),
-                    id: data.user.id,
-                    hwid: data.hwid,
+                    username: client.subscription.user.username.unwrap(),
+                    id: client.subscription.user.id,
+                    hwid: client.hwid,
                 })
             }),
         )

@@ -4,9 +4,10 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-tsar-client = "0.0.4"
+tsar-client = "0.0.8"
 eframe = "0.27.2"
 goldberg = "0.1.0"
+rainbow-text = "0.1.5"
 
 # Anti-debug Release
 [profile.release]

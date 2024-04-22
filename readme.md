@@ -11,9 +11,7 @@ This example uses very basic obfuscation and encryption. Make sure to implement 
 - Integer literal obfuscation (via [goldberg](https://docs.rs/goldberg/latest/goldberg/))
 - Linux anti-analysis (via [debugoff](https://github.com/0xor0ne/debugoff))
 
----
-
-This example also utilizes Rust's release flags to make the compiler build the binary in the most optimal way to prevent reverse engineering.
+### Release flags
 
 ```toml
 [profile.release]

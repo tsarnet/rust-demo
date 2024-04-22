@@ -1,5 +1,3 @@
-// #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
-
 use eframe::egui;
 use goldberg::goldberg_stmts;
 use tsar_client::{Client, ClientOptions};
@@ -15,7 +13,7 @@ fn main() -> Result<(), eframe::Error> {
         let client = Client::new(options).expect("Authentication failed.");
 
         eframe::run_native(
-            "TSAR Crack Test #1",
+            "TSAR Crack Test",
             eframe::NativeOptions::default(),
             Box::new(|_| {
                 Box::new(App {
@@ -38,13 +36,13 @@ impl eframe::App for App {
     fn update(&mut self, ctx: &egui::Context, _frame: &mut eframe::Frame) {
         goldberg_stmts! {{
             egui::CentralPanel::default().show(ctx, |ui| {
-                ui.heading("TSAR Crack Test #1");
+                ui.heading("TSAR Crack Test");
 
                 ui.separator();
 
                 ui.label(format!("Hello, {}", self.username));
                 ui.label(format!("Your user ID is {}", self.id));
-                ui.label(format!("Your user HWID is {}", self.hwid));
+                ui.label(format!("Your HWID is {}", self.hwid));
             });
         }}
     }

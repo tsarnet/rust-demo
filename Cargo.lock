@@ -891,6 +891,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "crack-me"
+version = "0.0.8"
+dependencies = [
+ "eframe",
+ "goldberg",
+ "tsar-client",
+]
+
+[[package]]
 name = "crc32fast"
 version = "1.4.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2707,15 +2716,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "rainbow-text"
-version = "0.1.5"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a61879081484a5830a4f91aa642cf14be4c2171eea2d37080ebaff0ff8782690"
-dependencies = [
- "termcolor",
-]
-
-[[package]]
 name = "rand"
 version = "0.8.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3299,16 +3299,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "06794f8f6c5c898b3275aebefa6b8a1cb24cd2c6c79397ab15774837a0bc5755"
 dependencies = [
  "winapi-util",
-]
-
-[[package]]
-name = "tester"
-version = "0.1.0"
-dependencies = [
- "eframe",
- "goldberg",
- "rainbow-text",
- "tsar-client",
 ]
 
 [[package]]

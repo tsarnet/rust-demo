@@ -2,14 +2,16 @@
 
 The purpose of this repository is to provide a simple example of TSAR authentication using Rust.
 
-This example uses very basic obfuscation and encryption, so it should not be used as an example for your production software. This is simply an example.
+This example uses very basic obfuscation and encryption. Make sure to implement further security measures for your production software.
 
-The security measures used in this example are:
+### The security measures used in this example are:
 
 - Code-flow obfuscation (via [goldberg](https://docs.rs/goldberg/latest/goldberg/))
 - String literal encryption (via [goldberg](https://docs.rs/goldberg/latest/goldberg/))
 - Integer literal obfuscation (via [goldberg](https://docs.rs/goldberg/latest/goldberg/))
 - Linux anti-analysis (via [debugoff](https://github.com/0xor0ne/debugoff))
+
+---
 
 This example also utilizes Rust's release flags to make the compiler build the binary in the most optimal way to prevent reverse engineering.
 

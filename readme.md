@@ -6,14 +6,14 @@ This example uses very basic obfuscation and encryption. Make sure to implement 
 
 ![banner](/banner.png)
 
-### The security measures used in this example are:
+## The security measures used in this example are:
 
 - Code-flow obfuscation (via [goldberg](https://docs.rs/goldberg/latest/goldberg/))
 - String literal encryption (via [goldberg](https://docs.rs/goldberg/latest/goldberg/))
 - Integer literal obfuscation (via [goldberg](https://docs.rs/goldberg/latest/goldberg/))
 - Linux anti-analysis (via [debugoff](https://github.com/0xor0ne/debugoff))
 
-### Release flags
+## Release flags
 
 ```toml
 [profile.release]

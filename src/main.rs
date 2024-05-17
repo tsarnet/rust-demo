@@ -5,15 +5,15 @@ use tsar_client::{Client, ClientOptions};
 fn main() -> Result<(), eframe::Error> {
     goldberg_stmts! {{
         let options = ClientOptions {
-            app_id: "58816206-b24c-41d4-a594-8500746a78ee".to_string(),
-            client_key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAELlyGTmNEv3AarudyshJUUA9ig1pOfSl5qWX8g/hkPiieeKlWvv9o4IZmWI4cCrcR0fteVEcUhBvu5GAr/ITBqA==".to_string(),
+            app_id: "d45750ee-7c2c-4453-9a90-397007bc1b9d".to_string(),
+            client_key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAElfwlA3IWW8+tI4+T0HNYA0ZmaTQEqBrEbygPgoaAvsK68KRvVXJN/IXOthd3ulxv6LCPqdRewAsG7srEmwAzhA==".to_string(),
             debug_print: true
         };
 
         let client = Client::new(options).expect("Authentication failed.");
 
         eframe::run_native(
-            "TSAR Crack Test",
+            "TSAR Rust Demo",
             eframe::NativeOptions::default(),
             Box::new(|_| {
                 Box::new(App {
@@ -36,7 +36,7 @@ impl eframe::App for App {
     fn update(&mut self, ctx: &egui::Context, _frame: &mut eframe::Frame) {
         goldberg_stmts! {{
             egui::CentralPanel::default().show(ctx, |ui| {
-                ui.heading("TSAR Crack Test");
+                ui.heading("TSAR Rust Demo");
 
                 ui.separator();
 

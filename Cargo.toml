@@ -1,10 +1,10 @@
 [package]
-name = "crack-me"
-version = "0.0.8"
+name = "rust-demo"
+version = "0.1.0-alpha.1"
 edition = "2021"
 
 [dependencies]
-tsar-client = "0.0.8"
+tsar-client = "0.1.0-alpha.1"
 eframe = "0.27.2"
 goldberg = "0.1.0"
 

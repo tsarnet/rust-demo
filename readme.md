@@ -1,8 +1,10 @@
-# TSAR Crack Test
+# TSAR Rust Demo
 
 The purpose of this repository is to provide a simple example of TSAR authentication using Rust.
 
 This example uses very basic obfuscation and encryption. Make sure to implement further security measures for your production software.
+
+![banner](/banner.png)
 
 ### The security measures used in this example are:
 

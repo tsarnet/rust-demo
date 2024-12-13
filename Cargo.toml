@@ -4,7 +4,7 @@ version = "0.1.0-alpha.1"
 edition = "2021"
 
 [dependencies]
-tsar-client = "0.1.0-alpha.1"
+tsar-sdk = "0.1.0-beta.3"
 eframe = "0.27.2"
 goldberg = "0.1.0"
 
